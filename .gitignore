@@ -161,3 +161,4 @@ cython_debug/
 /poetry.lock
 /data_home_care-ca-certificate.crt
 /.env.sh
+/nohup.out
