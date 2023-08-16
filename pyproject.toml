@@ -8,13 +8,13 @@ packages = [{include = "home_care_data"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pyodbc = "^4.0.39"
 fastapi = "^0.101.1"
 uvicorn = "^0.23.2"
 pandas = "^2.0.3"
 plotly = "^5.16.0"
 streamlit = "^1.25.0"
 numpy = "^1.25.2"
+psycopg2 = "^2.9.7"
 
 
 [build-system]
