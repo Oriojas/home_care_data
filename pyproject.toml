@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "home-care-data"
+version = "0.1.0"
+description = ""
+authors = ["oscar50 <oscar@whaleandjaguar.co>"]
+readme = "README.md"
+packages = [{include = "home_care_data"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
