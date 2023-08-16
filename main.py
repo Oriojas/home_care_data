@@ -15,7 +15,7 @@ origins = ['*']
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -28,7 +28,7 @@ URL_DB = os.environ["URL_DB"]
 @app.get("/send_data/")
 async def send_data(user: str, bpm: float, spo2: int):
     """
-    This function send data to IPFS with AWS endpoint
+    This function send data to cloud server with endpoint
     :param user: str, user identifier
     :param bpm: float, user data BPM
     :param spo2: int, user SpO2
