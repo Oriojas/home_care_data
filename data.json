@@ -1,0 +1,35 @@
+{
+  "centro_medico": {
+    "nombre": "CENTRO DE ESPECIALIDADES MÉDICAS",
+    "direccion": "AV. SIEMPRE VIVA 123, CIUDAD, PAÍS, 05450",
+    "telefono": "55-5566-9900"
+  },
+  "paciente": {
+    "nombre": "JULIO DEL PADRO PADILLA",
+    "edad": 28,
+    "sexo": "MASCULINO"
+  },
+  "consulta": {
+    "fecha": "12/12/16",
+    "diagnostico": "Gastroenteritis aguda",
+    "medico": {
+      "nombre": "DR. ALEJANDRO CARAPIA RODRÍGUEZ",
+      "especialidad": "MÉDICO GENERAL",
+      "cedula_profesional": "58496",
+      "telefono": "5596356"
+    },
+    "tratamiento": [
+      {
+        "medicamento": "Medicamento 1",
+        "instrucciones": "Tomar 1 cápsula cada 24 horas por 7 días."
+      },
+      {
+        "medicamento": "Medicamento 2",
+        "instrucciones": "Tomar 1 cápsula cada 8 horas por 5 días."
+      },
+      {
+        "recomendacion": "Guardar reposo total por 4 días."
+      }
+    ]
+  }
+}
