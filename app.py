@@ -65,7 +65,7 @@ else:
                 f.write(encoded_string)
 
             st.markdown("* * *")
-            st.markdown("## Resumen del documento")
+            st.markdown("### Resumen del documento")
 
             with open('data.json') as file:
                 data = json.load(file)
@@ -73,9 +73,10 @@ else:
                 tratamiento = data.get("consulta").get("tratamiento")
 
                 diagnostico = data.get("consulta").get("diagnostico")
-                st.markdown("### Diagnostico")
-                st.markdown(f" {diagnostico}")
+                st.markdown("#### Diagnostico:")
+                st.markdown(f"{diagnostico}")
 
+                st.markdown("#### Tratamiento::")
                 for i in range(len(tratamiento)):
                     if tratamiento[i].get("medicamento"):
                         st.write(tratamiento[i].get("medicamento"))
