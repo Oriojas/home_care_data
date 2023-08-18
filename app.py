@@ -20,7 +20,7 @@ def load_image(image_f):
 
 st.markdown("### Sin alarmas vigentes 👨🏽‍⚕️")
 st.markdown("* * *")
-st.image("img/Recurso 1.png")
+st.image("img/recurso_1.jpeg")
 st.write("")
 st.image("img/WhatsApp Image 2023-08-18 at 10.08.46 AM.jpeg")
 st.markdown("* * *")
