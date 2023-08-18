@@ -17,8 +17,7 @@ def load_image(image_f):
     return img_f
 
 
-st.markdown("### **Paciente:** Juan Perez, **Documento:** 100000002")
-st.markdown("#### Sin alarmas vigentes 👨🏽‍⚕️")
+st.markdown("### Sin alarmas vigentes 👨🏽‍⚕️")
 st.markdown("* * *")
 
 with st.sidebar:
