@@ -46,7 +46,7 @@ else:
     image_file = st.file_uploader("Sube una imagen 'png', 'jpeg', 'jpg'", type=['png', 'jpeg', 'jpg'])
     if image_file is not None:
         file_details = {"FileName": image_file.name, "FileType": image_file.type}
-        st.write(file_details)
+        # st.write(file_details)
         img = load_image(image_file)
         st.image(img)
         name = os.path.join("temp_data", image_file.name)
@@ -70,11 +70,18 @@ else:
             with open('data.json') as file:
                 data = json.load(file)
 
+                tratamiento = data.get("consulta").get("tratamiento")
+
+                diagnostico = data.get("consulta").get("diagnostico")
+                st.markdown("### Diagnostico")
+                st.markdown(f" {diagnostico}")
+
+                for i in range(len(tratamiento)):
+                    if tratamiento[i].get("medicamento"):
+                        st.write(tratamiento[i].get("medicamento"))
+                        st.write(tratamiento[i].get("instrucciones"))
+
+            with st.expander("Ver detalle documento"):
                 st.write(data)
-
-                st.write(data.get("paciente").get("nombre"))
-                st.write(data.get("paciente").get("edad"))
-                st.write(data.get("paciente").get("sexo"))
-
 
 st.markdown("* * *")
