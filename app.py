@@ -1,13 +1,14 @@
 import os
 import json
 import base64
+import requests
 import pdfplumber
 import pandas as pd
 from PIL import Image
 import streamlit as st
 import plotly.graph_objects as go
 
-st.set_page_config(page_title="Data Health Care",
+st.set_page_config(page_title="HealthVault",
                    page_icon="🏥",
                    layout="wide")
 
@@ -19,22 +20,30 @@ def load_image(image_f):
 
 st.markdown("### Sin alarmas vigentes 👨🏽‍⚕️")
 st.markdown("* * *")
+st.image("img/Recurso 1.png")
+st.write("")
+st.image("img/WhatsApp Image 2023-08-18 at 10.08.46 AM.jpeg")
+st.markdown("* * *")
 
 with st.sidebar:
-    st.markdown("# Bienvenidos a DHC 🏥")
+    st.markdown("# Bienvenidos HealthVault 🏥")
     st.markdown("## Medico tratante")
-    st.image("img/User-Profile-PNG.png")
-    st.markdown("**Nombre:** Dr. Julio Flores")
-    st.markdown("**Especialidad:** Gastroenterologo")
-    st.markdown("**Documento:** 100000002")
+    st.image("img/man.png")
+    st.markdown("**Nombre:** Julio")
+    st.markdown("**Apellidos:** del Padro Padilla")
+    st.markdown("**Edad:** 28 años")
+    st.markdown("**Peso:** 62 kg")
+    st.markdown("**Altura:** 165 cm")
+    st.image("img/Recurso 18.png")
 
-    st.warning('No olvidar verificar los datos del paciente', icon="⚠️")
+    st.warning('Recuerda que para facilitar la gestión y procesamiento de'
+               ' tu información, requerimos que compartas tus datos', icon="⚠️")
 
 option = st.selectbox(
     'Selecciona el tipo de documento a analizar',
     ('imagen', 'pdf'))
 
-st.write('You selected:', option)
+st.write('Selección:', option)
 
 if option == "pdf":
     uploaded_file = st.file_uploader('Sube un archivo .pdf', type="pdf")
@@ -65,7 +74,6 @@ else:
                 f.write(encoded_string)
 
             st.markdown("* * *")
-            st.markdown("### Resumen del documento")
 
             with open('data.json') as file:
                 data = json.load(file)
@@ -76,7 +84,7 @@ else:
                 st.markdown("#### Diagnostico:")
                 st.markdown(f"{diagnostico}")
 
-                st.markdown("#### Tratamiento::")
+                st.markdown("#### Tratamiento:")
                 for i in range(len(tratamiento)):
                     if tratamiento[i].get("medicamento"):
                         st.write(tratamiento[i].get("medicamento"))
