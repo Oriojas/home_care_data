@@ -27,7 +27,6 @@ st.markdown("* * *")
 
 with st.sidebar:
     st.markdown("# Bienvenidos HealthVault 🏥")
-    st.markdown("## Medico tratante")
     st.image("img/man.png")
     st.markdown("**Nombre:** Julio")
     st.markdown("**Apellidos:** del Padro Padilla")
